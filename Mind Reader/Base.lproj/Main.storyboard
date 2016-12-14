@@ -1,26 +1,168 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mind_Reader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mind Reader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mso-Jb-MXU">
+                                <rect key="frame" x="-12" y="20" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="GaE-n5-jwu"/>
+                                    <constraint firstAttribute="height" constant="49" id="bGx-io-6mb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think of a number 1-100..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4R-YM-ACa">
+                                <rect key="frame" x="-12" y="224" width="343" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="HXx-fI-dhB"/>
+                                    <constraint firstAttribute="width" constant="343" id="pDk-KH-cCR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MindReader.png" translatesAutoresizingMaskIntoConstraints="NO" id="qVx-V1-ger">
+                                <rect key="frame" x="40" y="88" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="oyN-ZI-WHl"/>
+                                    <constraint firstAttribute="width" constant="240" id="yo8-vb-E0C"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Di6-jf-lga">
+                                <rect key="frame" x="94" y="288" width="133" height="52"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="IHL-wu-M5N"/>
+                                    <constraint firstAttribute="width" constant="133" id="WVJ-ST-Hrj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p53-Z6-Nto"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-73-yNg">
+                                <rect key="frame" x="40" y="349" width="64" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Lower">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="lowerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fi-NC-QfH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGu-do-wdm">
+                                <rect key="frame" x="213" y="349" width="67" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Higher">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="higherButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WBu-dc-l4F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNE-Wn-K2x">
+                                <rect key="frame" x="139" y="346" width="42" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="xwT-uA-dsy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Yes!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="yesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFz-Se-0Kg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guesses Left: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acF-uJ-IYW">
+                                <rect key="frame" x="40" y="444" width="240" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00W-h6-EEm">
+                                <rect key="frame" x="94" y="507" width="133" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="M7j-QE-jF2"/>
+                                    <constraint firstAttribute="height" constant="30" id="mLr-RR-1EP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U0V-0R-cQ7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Di6-jf-lga" firstAttribute="top" secondItem="u4R-YM-ACa" secondAttribute="bottom" constant="8" id="5oB-Cc-KTl"/>
+                            <constraint firstItem="00W-h6-EEm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Ax-uP-2tL"/>
+                            <constraint firstItem="RNE-Wn-K2x" firstAttribute="centerX" secondItem="Di6-jf-lga" secondAttribute="centerX" id="Ji2-be-GdW"/>
+                            <constraint firstItem="0kh-73-yNg" firstAttribute="baseline" secondItem="xGu-do-wdm" secondAttribute="firstBaseline" id="LZk-tO-n3c"/>
+                            <constraint firstItem="xGu-do-wdm" firstAttribute="top" secondItem="Di6-jf-lga" secondAttribute="bottom" constant="9" id="Mz4-3y-U64"/>
+                            <constraint firstItem="xGu-do-wdm" firstAttribute="leading" secondItem="RNE-Wn-K2x" secondAttribute="trailing" constant="32" id="QBk-Hu-EFt"/>
+                            <constraint firstItem="xGu-do-wdm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="86.5" id="QGV-ns-LFE"/>
+                            <constraint firstItem="u4R-YM-ACa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T7V-fX-w7s"/>
+                            <constraint firstItem="qVx-V1-ger" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WX6-3d-CSk"/>
+                            <constraint firstItem="00W-h6-EEm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Whc-1G-za4"/>
+                            <constraint firstItem="RNE-Wn-K2x" firstAttribute="leading" secondItem="0kh-73-yNg" secondAttribute="trailing" constant="35" id="dAK-Up-eg4"/>
+                            <constraint firstItem="qVx-V1-ger" firstAttribute="top" secondItem="mso-Jb-MXU" secondAttribute="bottom" constant="19" id="ev9-Dw-XYg"/>
+                            <constraint firstItem="0kh-73-yNg" firstAttribute="leading" secondItem="qVx-V1-ger" secondAttribute="leading" id="glw-od-ewA"/>
+                            <constraint firstItem="RNE-Wn-K2x" firstAttribute="centerY" secondItem="0kh-73-yNg" secondAttribute="centerY" id="hrn-1W-mM3"/>
+                            <constraint firstItem="u4R-YM-ACa" firstAttribute="top" secondItem="qVx-V1-ger" secondAttribute="bottom" constant="8" id="i5g-T4-RWN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="00W-h6-EEm" secondAttribute="bottom" constant="31" id="iKF-Og-qUj"/>
+                            <constraint firstItem="mso-Jb-MXU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="k6Q-iM-bTF"/>
+                            <constraint firstItem="Di6-jf-lga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qQq-Ux-VOS"/>
+                            <constraint firstItem="0kh-73-yNg" firstAttribute="top" secondItem="xGu-do-wdm" secondAttribute="top" id="rnI-gU-m01"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0kh-73-yNg" secondAttribute="bottom" constant="189" id="tcP-Le-JXI"/>
+                            <constraint firstItem="xGu-do-wdm" firstAttribute="top" secondItem="Di6-jf-lga" secondAttribute="bottom" constant="9" id="u51-0o-ixS"/>
+                            <constraint firstItem="mso-Jb-MXU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xrA-ix-VYm"/>
+                            <constraint firstItem="0kh-73-yNg" firstAttribute="firstBaseline" secondItem="xGu-do-wdm" secondAttribute="baseline" id="zEI-XO-ApQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="guessesLeft" destination="acF-uJ-IYW" id="zHd-52-oOo"/>
+                        <outlet property="higherButton" destination="xGu-do-wdm" id="6gc-bc-c2o"/>
+                        <outlet property="lowerButton" destination="0kh-73-yNg" id="qyU-ji-xRV"/>
+                        <outlet property="nextButton" destination="Di6-jf-lga" id="78t-8t-8PS"/>
+                        <outlet property="questionLabel" destination="u4R-YM-ACa" id="07m-Mn-TKk"/>
+                        <outlet property="restartButton" destination="00W-h6-EEm" id="owc-Sb-e8q"/>
+                        <outlet property="yesButton" destination="RNE-Wn-K2x" id="q28-jy-9qD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1387.5" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MindReader.png" width="300" height="300"/>
+    </resources>
 </document>

@@ -12,6 +12,7 @@
 		E7C1E6111DFF91A900E896A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C1E60F1DFF91A900E896A2 /* Main.storyboard */; };
 		E7C1E6131DFF91A900E896A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C1E6121DFF91A900E896A2 /* Assets.xcassets */; };
 		E7C1E6161DFF91A900E896A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C1E6141DFF91A900E896A2 /* LaunchScreen.storyboard */; };
+		E7C1E61E1DFF92EC00E896A2 /* MindReader.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C1E61D1DFF92EC00E896A2 /* MindReader.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E7C1E6121DFF91A900E896A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7C1E6151DFF91A900E896A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7C1E6171DFF91A900E896A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7C1E61D1DFF92EC00E896A2 /* MindReader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MindReader.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		E7C1E60A1DFF91A900E896A2 /* Mind Reader */ = {
 			isa = PBXGroup;
 			children = (
+				E7C1E61D1DFF92EC00E896A2 /* MindReader.png */,
 				E7C1E60B1DFF91A900E896A2 /* AppDelegate.swift */,
 				E7C1E60D1DFF91A900E896A2 /* ViewController.swift */,
 				E7C1E60F1DFF91A900E896A2 /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C1E61E1DFF92EC00E896A2 /* MindReader.png in Resources */,
 				E7C1E6161DFF91A900E896A2 /* LaunchScreen.storyboard in Resources */,
 				E7C1E6131DFF91A900E896A2 /* Assets.xcassets in Resources */,
 				E7C1E6111DFF91A900E896A2 /* Main.storyboard in Resources */,
